@@ -10,23 +10,22 @@
  "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" \
  "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 
-int angel(int ac, char *av[]);
-int devil(int ac, char *av[]);
+int angel();
+int devil();
 
-char *str1 = DUMMY "A";
-char *str2 = DUMMY "B";
+char *dummya = DUMMY "A";
+char *dummyb = DUMMY "B";
 
-int main(int ac, char *av[]) {
-  if (strcmp(str1, str2) != 0) {
-    return angel(ac, av);
+int main() {
+  if (strcmp(dummya, dummyb) != 0) {
+    return angel();
   } else {
-    return devil(ac, av);
+    return devil();
   }
 }
 
 
 int angel(int ac, char *av[]) {
-  char buf[10];
     fprintf(stdout, ".                                       ,\n");
     fprintf(stdout, ")).               -===-               ,((\n");
     fprintf(stdout, "))).                                 ,(((\n");
@@ -50,7 +49,6 @@ int angel(int ac, char *av[]) {
 }
 
 int devil(int ac, char *av[]) {
-  char buf[10];
     fprintf(stdout, "        _.---**""**-.\n");
     fprintf(stdout, "._   .-'           /|`.\n");
     fprintf(stdout, " \\`.'             / |  `.\n");
