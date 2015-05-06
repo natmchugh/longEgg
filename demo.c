@@ -25,7 +25,7 @@ int main() {
 }
 
 
-int angel(int ac, char *av[]) {
+int angel() {
     fprintf(stdout, ".                                       ,\n");
     fprintf(stdout, ")).               -===-               ,((\n");
     fprintf(stdout, "))).                                 ,(((\n");
@@ -48,7 +48,7 @@ int angel(int ac, char *av[]) {
   return 0;
 }
 
-int devil(int ac, char *av[]) {
+int devil() {
     fprintf(stdout, "        _.---**""**-.\n");
     fprintf(stdout, "._   .-'           /|`.\n");
     fprintf(stdout, " \\`.'             / |  `.\n");
