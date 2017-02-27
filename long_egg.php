@@ -43,16 +43,16 @@ if (!file_exists(__DIR__.'/a')) {
 $good = replaceDummyText($filestring, file_get_contents(__DIR__.'/a'), $pos);
 $bad  = replaceDummyText($filestring, file_get_contents(__DIR__.'/b'), $pos);
 
-// find the secod dummy string
+// find the second dummy string
 $secondDummyTextStart = strpos($good, str_pad('', 191, 'A'));
 
-// serach back from where we inserted the collision first time so we can grab the whole
+// search back from where we inserted the collision first time so we can grab the whole
 // 192 bytes and use it to replace the second string
 while ('A' == substr($filestring, $pos-1, 1)) {
     --$pos;
 }
 
-//the 192 butes of str1
+//the 192 bytes of str1
 $replacement = substr($good, $pos, 192);
 
 // replace str1 with 192 bytes cut from of the files
